@@ -55,3 +55,7 @@ div .role {
   display: flex;
   justify-content: space-between;
 }
+.roleicon {
+  height: 18px;
+  margin-right: 5px;
+}

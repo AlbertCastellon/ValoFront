@@ -9,7 +9,7 @@ const AgentCard = ({ agent }) => {
             <div className="footnote">
                 <div>
                     <h2>{agent.displayName}</h2>
-                    <h4>{agent.role.displayName}</h4>
+                    <h4><img className="roleicon" src={agent.role.displayIcon} />{agent.role.displayName}</h4>
                 </div>
                 <div className={`role ${agent.role.displayName}`}></div>
             </div>     
