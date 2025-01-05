@@ -1,0 +1,57 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  background: #0f1923;
+  color: #ff4658;;
+}
+
+h1{
+  text-align: center;
+}
+.agentsPool {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.agentCard{
+  background-color: #ff4658;
+  color: #0f1923;
+  margin: 5px;
+  border-radius: 5px;
+}
+.agentCard h2{
+  margin-left: 10px;
+}
+.agentCard h4{
+  margin-left: 10px;
+}
+div .role {
+  border: 2px solid #0f1923;
+  width: 40px;
+  height: 60px;
+  border-radius: 25% 0 25% 0;
+  position: relative;
+  right: 10px;
+  top: 45px;
+}
+.Initiator{
+  background-color: darkorange;
+}
+.Controller{
+  background-color: darkslateblue;
+}
+.Duelist{
+  background-color: firebrick;
+}
+.Sentinel{
+  background-color: teal;
+}
+.icon{
+  margin: 10px;
+  background-color: #0f1923;
+  border-radius: 8px;
+}
+.footnote {
+  display: flex;
+  justify-content: space-between;
+}
