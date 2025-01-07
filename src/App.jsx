@@ -1,26 +1,17 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Agents from './pages/Agents'
 import './App.css'
-import AgentCard from './components/AgentCard'
-const url = "https://valorant-api.com/v1/agents"
+import AgentId from './pages/AgentId'
 
 function App() {
-  const [info, setInfo] = useState([])
-  const fetchData = async () => {
-    const data = await axios.get(url)
-    setInfo(data.data.data)
-  }
-  useEffect(() =>  {
-    fetchData()
-  }, [])
   return (
-    <>
-      <h1>Valorant</h1>
-        <div className='agentsPool'>
-          {info.map(agent => <AgentCard agent={agent}/>)}
-        </div>
-        {console.log(info)}
-    </>
+      <Router>
+        <Routes>
+          <Route path='/agents' element={<Agents />} /> 
+          <Route path='/agents/:uuid' element={<AgentId />}/> 
+        </Routes>
+      </Router>
+ 
   )
 }
 
