@@ -13,13 +13,17 @@ function AgentId() {
   }
   useEffect(() =>  {
     fetchData()
-  }, [])
-  console.log(info)
+  }, [uuid])
   return (
     <>
       <h1>{info.displayName}</h1>
-      <img className="profilePic" src={info.fullPortrait} alt="profile picture"/>
       <p>{info.description}</p>
+      <img className="profilePic" src={info.fullPortrait} alt="profile picture"/>
+      <ul>
+        {info.abilities &&
+        info.abilities.map(ability => (<li>{ability.displayName}<p>{ability.description}</p></li>))
+        }
+      </ul>    
        
     </>
   )
