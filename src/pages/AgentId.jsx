@@ -22,17 +22,20 @@ function AgentId() {
     fetchData()
   }, [uuid])
   return (
-    <>
+    <div className='agentPage'>
       <h1>{info.displayName}</h1>
-      <p>{info.description}</p>
-      <img className="profilePic" src={info.fullPortrait} alt="profile picture"/>
-      <ul>
-        {info.abilities &&
-        info.abilities.map(ability => (<li>{abilityKeys[ability.slot]}: {ability.displayName}<p>{ability.description}</p></li>))
-        }
-      </ul>    
-       
-    </>
+      <div className='agentProfile'>
+        <img className="profilePic" src={info.fullPortrait} alt="profile picture"/>
+        <div className='agentText'>
+          <p className='agentDescription'>{info.description}</p>
+          <ul className='agentAbilities'>
+            {info.abilities &&
+            info.abilities.map(ability => (<li>{abilityKeys[ability.slot]}: {ability.displayName}<p>{ability.description}</p></li>))
+            }
+          </ul>  
+        </div>  
+      </div>
+    </div>
   )
 }
 
