@@ -11,6 +11,13 @@ function AgentId() {
     const data = await axios.get(url + '/' + uuid)
     setInfo(data.data.data)
   }
+  const abilityKeys = {
+    Ability1: 'Q',
+    Ability2: 'E',
+    Grenade: 'C',
+    Ultimate: 'X',
+    Passive: 'Passive'
+  }
   useEffect(() =>  {
     fetchData()
   }, [uuid])
@@ -21,7 +28,7 @@ function AgentId() {
       <img className="profilePic" src={info.fullPortrait} alt="profile picture"/>
       <ul>
         {info.abilities &&
-        info.abilities.map(ability => (<li>{ability.displayName}<p>{ability.description}</p></li>))
+        info.abilities.map(ability => (<li>{abilityKeys[ability.slot]}: {ability.displayName}<p>{ability.description}</p></li>))
         }
       </ul>    
        

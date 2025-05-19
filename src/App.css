@@ -63,3 +63,27 @@ div .role {
 .profilePic {
   height: 600px;
 }
+
+.homeLinks {
+  color: #ff4658;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.headerLink {
+  color: #ff4658;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.headerLink:hover {
+  color: #0f1923;
+  background-color: #ff4658;
+}

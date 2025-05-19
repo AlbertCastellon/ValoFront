@@ -7,9 +7,9 @@ function Header() {
             <header>
                 <h2>VALORANT</h2>
                 <nav>
-                    <Link to="/"><div>Home</div></Link>
-                    <Link to="/agents"><div>Agents</div></Link>                    
-                    <Link to=""><div></div></Link>
+                    <Link to="/" className='headerLink'><div>Home</div></Link>
+                    <Link to="/agents" className='headerLink'><div>Agents</div></Link>                   
+                    <Link to="" className='headerLink'><div></div></Link>
                 </nav>
             </header>
        </> 

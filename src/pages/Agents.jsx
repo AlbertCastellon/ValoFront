@@ -10,12 +10,13 @@ function Agents() {
     const data = await axios.get(url)
     setInfo(data.data.data)
   }
+  console.log(info)
   useEffect(() =>  {
     fetchData()
   }, [])
   return (
     <>
-      <h1>Valorant</h1>
+      <h1>Agents</h1>
         <div className='agentsPool'>
           {info.map(agent => <AgentCard agent={agent}/>)}
         </div>
